@@ -16,6 +16,7 @@ builder.Services.AddScoped<IContatoRepository, ContatoRepository>();
 builder.Services.AddScoped<IDistribuidoraRepository, DistribuidoraRepository>();
 builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
 builder.Services.AddScoped<ILojaRepository, LojaRepository>();
+builder.Services.AddScoped<IPagamentoRepository, PagamentoRepository>();
 
 var app = builder.Build();
 
