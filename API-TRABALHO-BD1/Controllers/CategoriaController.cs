@@ -6,7 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 namespace API_TRABALHO_BD1.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class CategoriaController : ControllerBase
     {
         private readonly ICategoriaRepository categoriaRepository;

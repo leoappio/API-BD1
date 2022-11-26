@@ -102,7 +102,7 @@ namespace API_TRABALHO_BD1.Repository
 
                 return new Cliente
                 {
-                    CodCliente = (decimal)id,
+                    CodCliente = codigo,
                     Idade = idade,
                     CPF = cpf,
                     Nome = nome

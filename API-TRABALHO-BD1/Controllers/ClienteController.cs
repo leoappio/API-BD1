@@ -1,13 +1,12 @@
 ﻿using API_TRABALHO_BD1.Entity;
 using API_TRABALHO_BD1.Repository.Interfaces;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 
 namespace API_TRABALHO_BD1.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class ClienteController : ControllerBase
     {
         private readonly IClienteRepository clienteRepository;
