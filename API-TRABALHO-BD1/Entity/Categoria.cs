@@ -2,7 +2,7 @@
 {
     public class Categoria
     {
-        public int CodCategoria { get; set; }
+        public decimal CodCategoria { get; set; }
         public string Descricao { get; set; } = "";
     }
 }
