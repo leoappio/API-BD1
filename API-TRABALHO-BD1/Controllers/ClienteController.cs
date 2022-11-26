@@ -43,7 +43,7 @@ namespace API_TRABALHO_BD1.Controllers
 
         [HttpPost]
         [Route("CadastrarCliente")]
-        public ActionResult<Categoria> CadastrarCliente(decimal idade, string cpf, string nome)
+        public ActionResult<Cliente> CadastrarCliente(decimal idade, string cpf, string nome)
         {
             if (idade > 0 && !cpf.IsNullOrEmpty() && !nome.IsNullOrEmpty())
             {
@@ -55,7 +55,7 @@ namespace API_TRABALHO_BD1.Controllers
 
         [HttpPost]
         [Route("EditarCliente")]
-        public ActionResult<Categoria> EditarCliente(decimal codigo, decimal idade, string cpf, string nome)
+        public ActionResult<Cliente> EditarCliente(decimal codigo, decimal idade, string cpf, string nome)
         {
             if (codigo > 0 && idade > 0 && !cpf.IsNullOrEmpty() && !nome.IsNullOrEmpty())
             {
