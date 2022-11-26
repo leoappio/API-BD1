@@ -96,7 +96,7 @@ namespace API_TRABALHO_BD1.Controllers
             }
             else
             {
-                return BadRequest("Id da categoria inválido");
+                return BadRequest("Código da categoria inválido");
             }
         }
     }
