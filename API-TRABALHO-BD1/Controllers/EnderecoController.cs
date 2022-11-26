@@ -20,7 +20,7 @@ namespace API_TRABALHO_BD1.Controllers
 
 
         [HttpGet]
-        [Route("GetContatoPorCodigo")]
+        [Route("GetEnderecoPorCodigo")]
         public ActionResult<Endereco> GetEnderecoPorCodigo(decimal codigo)
         {
             if (codigo > 0)

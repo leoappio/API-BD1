@@ -83,7 +83,7 @@ namespace API_TRABALHO_BD1.Controllers
         {
             if (codigo > 0 && cod_cliente > 0 && !numeroCelular.IsNullOrEmpty() && !email.IsNullOrEmpty())
             {
-                var cliente = clienteRepository.GetClientePorCodigo(codigo);
+                var cliente = clienteRepository.GetClientePorCodigo(cod_cliente);
 
                 if (cliente != null)
                 {
