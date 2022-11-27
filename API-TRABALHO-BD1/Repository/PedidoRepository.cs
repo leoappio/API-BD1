@@ -229,10 +229,11 @@ namespace API_TRABALHO_BD1.Repository
 
         public List<RelatorioVendasMensal> GetRelatorioVendasMensal()
         {
-            var query = $@"SELECT CONCAT(DATEPART(mm, P.DATA_PEDIDO),'/', DATEPART(yyyy, P.DATA_PEDIDO)) AS DATA, SUM(P.VALOR_TOTAL) AS TOTAL
-                           FROM PEDIDO P
-                           GROUP BY CONCAT(DATEPART(mm, P.DATA_PEDIDO),'/', DATEPART(yyyy, P.DATA_PEDIDO))
-                           ORDER BY TOTAL DESC";
+            var query = $@"SELECT CONCAT(DATEPART(mm, P.DATA_PEDIDO),'/', DATEPART(yyyy, P.DATA_PEDIDO)) AS DATA, SUM(P.VALOR_TOTAL) AS TOTAL, SUM(PP.quantidade) AS PRODUTOS_VENDIDOS
+                        FROM PEDIDO P
+                        INNER JOIN PRODUTOS_PEDIDO PP ON (PP.cod_pedido = P.cod_pedido)
+                        GROUP BY CONCAT(DATEPART(mm, P.DATA_PEDIDO),'/', DATEPART(yyyy, P.DATA_PEDIDO))
+                        ORDER BY TOTAL DESC";
 
             var listaRelatorio = new List<RelatorioVendasMensal>();
 
@@ -246,7 +247,8 @@ namespace API_TRABALHO_BD1.Repository
                     listaRelatorio.Add(new RelatorioVendasMensal
                     {
                         ValorTotal = Convert.ToSingle(reader["total"]),
-                        Data = (string)reader["data"]
+                        Data = (string)reader["data"],
+                        ProdutosVendidos = int.Parse(reader["produtos_vendidos"].ToString())
                     });
                 }
 

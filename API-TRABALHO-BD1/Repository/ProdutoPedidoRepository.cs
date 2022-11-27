@@ -67,7 +67,7 @@ namespace API_TRABALHO_BD1.Repository
             var produto = produtoRepository.GetProdutoPorCodigo(codProduto);
             var novoTotal = valorTotalAntigo + (valorTotal);
 
-            var query = $@"INSERT INTO PRODUTO_PEDIDO VALUES({codProduto}, {codPedido}, {quantidade}, {valorTotal});
+            var query = $@"INSERT INTO PRODUTOS_PEDIDO VALUES({codProduto}, {codPedido}, {quantidade}, {valorTotal});
                            UPDATE PEDIDO SET VALOR_TOTAL = {novoTotal} WHERE COD_PEDIDO = {codPedido}";
 
             using (var command = new SqlCommand(query, sqlConnection))

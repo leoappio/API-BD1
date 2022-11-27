@@ -4,5 +4,6 @@
     {
         public string Data { get; set; }
         public float ValorTotal { get; set; }
+        public int ProdutosVendidos { get; set; }
     }
 }
