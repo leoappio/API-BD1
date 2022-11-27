@@ -10,7 +10,7 @@
         public Distribuidora Distribuidora { get; set; }
         public Pagamento TipoPagamento { get; set; }
         public DateTime DataPedido { get; set; }
-        public List<Produto> Produtos { get; set; }
+        public List<ProdutoPedido> Produtos { get; set; }
 
     }
 }

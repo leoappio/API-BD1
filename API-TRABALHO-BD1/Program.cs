@@ -19,7 +19,7 @@ builder.Services.AddScoped<ILojaRepository, LojaRepository>();
 builder.Services.AddScoped<IPagamentoRepository, PagamentoRepository>();
 builder.Services.AddScoped<IProdutoPedidoRepository, ProdutoPedidoRepository>();
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
-//builder.Services.AddScoped<IPedidoRepository, PedidoRepository>();
+builder.Services.AddScoped<IPedidoRepository, PedidoRepository>();
 
 var app = builder.Build();
 
